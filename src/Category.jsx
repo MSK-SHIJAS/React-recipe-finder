@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Category = () => {
     const[category,setCategory]=useState([])
@@ -16,7 +17,11 @@ const Category = () => {
     <div className='categories flex-wrap gap-4 justify-content-center'>
       {category.map((item,index)=>(
         <div class="card "style={{width:'400px'}}>
-        <img src={item.strCategoryThumb}  class="img card-img-top" alt="recipe"/>
+
+<Link to={`/detail/${item.strCategory}`}>
+<img src={item.strCategoryThumb}  class="img card-img-top" alt="recipe"/>
+ </Link>
+
         <p class="card-text text-center">{item.strCategory}</p>
         </div>
     ))}
