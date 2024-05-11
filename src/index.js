@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Detail from './Detail';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Meals from './Meals';
+import Allitems from './Allitems';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +19,7 @@ root.render(
   <Route path='/' element={<App/>}></Route>
  <Route path='/detail/:catName' element={<Detail/>}></Route>
  <Route path='/meals/:meals' element={<Meals/>}></Route>
+ <Route path='/allitems' element={<Allitems/>}></Route>
   </Routes>
   </BrowserRouter>
   </React.StrictMode> 

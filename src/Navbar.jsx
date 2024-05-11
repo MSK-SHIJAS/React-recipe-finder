@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaRegHeart } from "react-icons/fa";
 import './index.css';
+import { Link } from 'react-router-dom'
 
 function Navbars() {
   return (
@@ -12,7 +13,7 @@ function Navbars() {
           <Navbar.Brand href="#home">RECIPE</Navbar.Brand>
           <Nav className="mx-auto">
             <Nav.Link href="#home">HOME</Nav.Link>
-            <Nav.Link href="#features">ALL ITEMS</Nav.Link>
+            <Nav.Link as={Link} to="/allitems">ALL ITEMS</Nav.Link>
             <Nav.Link href="#pricing">FAVORITE</Nav.Link>
             <FaRegHeart className='mt-2'/>
             <Nav.Link href="#pricing">COUNTRY</Nav.Link>
