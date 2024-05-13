@@ -14,6 +14,16 @@ const Category = () => {
         fetchdata()
         },[])
   return (
+    <>
+    <div className='mt-3'>
+    <img src="rp.png" class="img-fluid w-100" alt="abhi"/>
+    <p class="text fs-1 fw-bold">Find recipes for every occasion<br/>
+     Cooking has never been easier</p>
+     <input class="SEARCH btn btn-success rounded-piLl" type="submit" value="SEARCH"></input>
+  </div>
+
+
+
     <div className='categories flex-wrap gap-4 justify-content-center'>
       {category.map((item,index)=>(
         <div class="card "style={{width:'400px'}}>
@@ -26,6 +36,7 @@ const Category = () => {
         </div>
     ))}
     </div>
+    </>
   )
 }
 

@@ -1,11 +1,14 @@
+
 import './App.css';
 import Category from './Category';
-import Navbar from './Navbar';
+
+import Navbars from './Navbars';
 
 function App() {
   return (
     <div>    
-<Navbar/>
+<Navbars/>
+
 <Category/>
     </div>
   );

@@ -8,6 +8,10 @@ import Detail from './Detail';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Meals from './Meals';
 import Allitems from './Allitems';
+import Country from './Country';
+import Countryfilter from './Countryfilter';
+import Category from './Category';
+import Navbars from './Navbars';
 
 
 
@@ -16,10 +20,14 @@ root.render(
   <React.StrictMode>
   <BrowserRouter>
   <Routes>
-  <Route path='/' element={<App/>}></Route>
+  <Route path='/' element={<Navbars/>}> 
+  <Route index element={<Category/>}/> 
  <Route path='/detail/:catName' element={<Detail/>}></Route>
  <Route path='/meals/:meals' element={<Meals/>}></Route>
  <Route path='/allitems' element={<Allitems/>}></Route>
+ <Route path='/country' element={<Country/>}></Route>
+ <Route path='/cnf/:item' element={<Countryfilter/>}></Route>
+ </Route>
   </Routes>
   </BrowserRouter>
   </React.StrictMode> 
