@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const Category = () => {
     const[category,setCategory]=useState([])
@@ -15,14 +17,31 @@ const Category = () => {
         },[])
   return (
     <>
-    <div className='mt-3'>
-    <img src="rp.png" class="img-fluid w-100" alt="abhi"/>
-    <p class="text fs-1 fw-bold">Find recipes for every occasion<br/>
-     Cooking has never been easier</p>
-     <input class="SEARCH btn btn-success rounded-piLl" type="submit" value="SEARCH"></input>
-  </div>
-
-
+<Carousel>
+      <Carousel.Item>
+      <img src="rp.png" class="d-block w-100" alt="..."/>
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="rp.png" class="d-block w-100" alt="..."/>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="rp.png" class="d-block w-100" alt="..."/>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
 
     <div className='categories flex-wrap gap-4 justify-content-center'>
       {category.map((item,index)=>(

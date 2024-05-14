@@ -9,15 +9,18 @@ import { Link} from 'react-router-dom'
 function Navbars() {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light" className='mt-3'>
-        <Container>
-          <Navbar.Brand href="/">RECIPE</Navbar.Brand>
+      <Navbar bg='blue' data-bs-theme="white" className='ul mt-3'>
+        <Container className='li fw-bold '>
+          <Navbar.Brand Link as={Link} to="/recipe">RECIPE</Navbar.Brand>
           <Nav className="mx-auto">
             <Nav.Link href="/">HOME</Nav.Link>
             <Nav.Link as={Link} to="/allitems">ALL ITEMS</Nav.Link>
-            <Nav.Link href="#pricing">FAVORITE</Nav.Link>
-            <FaRegHeart className='mt-2'/>
+            <Nav.Link href="#pricing">FAVORITE
+            <FaRegHeart className='logo ms-2 mx-auto '/></Nav.Link>
             <Nav.Link as={Link} to="/country">COUNTRY</Nav.Link>
+            <Link to="/search"className="search btn btn-success rounded-pill justify-content-center">SEARCH</Link>
+            
+
           </Nav>
         </Container>
       </Navbar>
