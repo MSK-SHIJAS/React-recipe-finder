@@ -13,9 +13,9 @@ function Navbars() {
         <Container className='li fw-bold '>
           <Navbar.Brand Link as={Link} to="/recipe">RECIPE</Navbar.Brand>
           <Nav className="mx-auto">
-            <Nav.Link href="/">HOME</Nav.Link>
+            <Link className="home mt-2 me-2" href="/">HOME</Link>
             <Nav.Link as={Link} to="/allitems">ALL ITEMS</Nav.Link>
-            <Nav.Link href="#pricing">FAVORITE
+            <Nav.Link as={Link} to="/fav">FAVORITE
             <FaRegHeart className='logo ms-2 mx-auto '/></Nav.Link>
             <Nav.Link as={Link} to="/country">COUNTRY</Nav.Link>
             <Link to="/search"className="search btn btn-success rounded-pill justify-content-center">SEARCH</Link>

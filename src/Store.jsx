@@ -1,13 +1,8 @@
-// import React from 'react';
-// import { configureStore } from '@reduxjs/toolkit';
-// import datas from './DataSlice'
+import { configureStore } from '@reduxjs/toolkit'
+import favour from './favSlice'
 
-// const Store = configureStore({
-//         reducer : {
-//             datastore : datas
-//         }
-    
-//   })
-  
-
-// export default Store
+export const store = configureStore({
+  reducer: {
+    favstore: favour
+  },
+})

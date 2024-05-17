@@ -15,13 +15,17 @@ import Navbars from './Navbars';
 import Recipe from './Recipe';
 import Search from './Search';
 import SearchResult from './SearchResult';
-
+import Fav from './Fav';
+import Recipie from './Recipie';
+import { store } from './Store';
+import {Provider} from 'react-redux'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
   <BrowserRouter>
   <Routes>
   <Route path='/' element={<Navbars/>}> 
@@ -29,15 +33,17 @@ root.render(
   <Route path='recipe' element={<Recipe/>}/> 
  <Route path='/detail/:catName' element={<Detail/>}></Route>
  <Route path='/meals/:meals' element={<Meals/>}></Route>
+ {/* <Route path='/meals/:meals' element={<Recipie/>}></Route> */}
  <Route path='/allitems' element={<Allitems/>}></Route>
  <Route path='/country' element={<Country/>}></Route>
  <Route path='/cnf/:item' element={<Countryfilter/>}></Route>
  <Route path='/search' element={<Search/>}></Route>
  <Route path='/searchresult' element={<SearchResult/>}></Route>
-
+ <Route path='/fav' element={<Fav/>}></Route>
  </Route>
   </Routes>
   </BrowserRouter>
+  </Provider>
   </React.StrictMode> 
 );
 
